@@ -1,11 +1,7 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
-from account_ledger_app.serializers import AccountSerializer, LedgerSerializer
-from account_ledger_app.models import Account, Ledger
-
-class AccountViewSet(ModelViewSet):
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+from account_ledger_app.serializers import LedgerSerializer
+from account_ledger_app.models import Ledger
 
 class LedgerViewSet(ModelViewSet):
     queryset = Ledger.objects.all()
